@@ -1,0 +1,2 @@
+# primary editor
+export EDITOR="vim"
