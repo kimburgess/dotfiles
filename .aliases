@@ -1,4 +1,4 @@
-# dotfiles management (https://news.ycombinator.com/item?id=11070798)
+# dotfiles management (https://news.ycombinator.com/item?id=11070797)
 alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 # make ls a little nicer for humans
