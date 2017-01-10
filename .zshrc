@@ -4,6 +4,10 @@ for file in ~/.{exports,aliases}; do
 done
 unset file
 
+# vi edit mode 
+bindkey -v
+export KEYTIMEOUT=10
+
 # syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -17,7 +21,7 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyy-mm-dd"
 
 # plugins
-plugins=(git)
+plugins=(git vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 # geometry options
