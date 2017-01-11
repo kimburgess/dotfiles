@@ -21,7 +21,7 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyy-mm-dd"
 
 # plugins
-plugins=(git vi-mode)
+plugins=(git vi-mode z npm bower docker node)
 source $ZSH/oh-my-zsh.sh
 
 # geometry options
