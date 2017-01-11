@@ -36,6 +36,7 @@ set showcmd         " show last command in bottom bar
 set showmatch       " bracket highlighting
 set spell           " spell checking
 set visualbell      " die beep, die
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
 " visual autocomplete for command menu
 set wildmenu
