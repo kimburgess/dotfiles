@@ -43,7 +43,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="geometry/geometry"
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
-HIST_STAMPS="yyy-mm-dd"
+HIST_STAMPS="yyyy-mm-dd"
 
 # plugins
 plugins=(git vi-mode z npm bower docker node)
