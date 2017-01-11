@@ -167,7 +167,7 @@ bar {
         colors {
                 background $bg-colour
                 separator #757575
-                #                  border             background         text
+                #                  border              background          text
                 focused_workspace  $bg-colour          $bg-colour          $text-colour
                 inactive_workspace $inactive-bg-colour $inactive-bg-colour $inactive-text-colour
                 urgent_workspace   $urgent-bg-colour   $urgent-bg-colour   $text-colour
@@ -176,3 +176,7 @@ bar {
 
 # Keybinding for i3lock
 bindsym $mod+shift+x exec i3lock
+
+# compositor
+exec_always compton -f
+
