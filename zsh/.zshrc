@@ -37,7 +37,7 @@ alias egrep="grep --color=auto"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # oh-my-zsh install path
-export ZSH=/home/kim/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # prefs 
 ZSH_THEME="geometry/geometry"
