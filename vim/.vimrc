@@ -1,17 +1,11 @@
-set nocompatible
-filetype off
+call plug#begin('~/,vim/plugged')
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'junegunn/goyo.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'airblade/vim-gitgutter'
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'junegunn/goyo.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'airblade/vim-gitgutter'
-
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
