@@ -10,7 +10,6 @@ Xft.hintstyle:  hintfull
 URxvt.font:xft:		Roboto Mono for Powerline:style=Regular:pixelsize=12
 URxvt.boldfont:xft:	Roboto Mono Bold for Powerline:style=Bold:pixelsize=12
 URxvt*scrollBar: 	false
-URxvt.internalBorder:   15
 
 
 ! Base16 Default Dark
