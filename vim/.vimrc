@@ -5,6 +5,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
 filetype plugin indent on
@@ -43,3 +44,9 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 " make leaving insert mode suck less
 inoremap jk <esc>
+
+" NERDTree config
+let NERDTreeMapAtivateNode='<right>'
+let NERDTreeShowHidden=1
+nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>j :NERDTreeFind<CR>
