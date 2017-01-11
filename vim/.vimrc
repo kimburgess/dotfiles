@@ -1,7 +1,17 @@
-let mapleader=","
+set nocompatible
+filetype off
 
-" make some assumptions from file types
-filetype on
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+call vundle#end()
+filetype plugin indent on
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let mapleader=","
 
 " enable syntax processing
 syntax on
