@@ -3,6 +3,7 @@ call plug#begin('~/,vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/goyo.vim'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-surround'
@@ -30,13 +31,13 @@ set autoindent
 set smartindent
 
 " UI
+set laststatus=2    " always show status line
 set nowrap          " disable line wraps
 set number          " line numbers
 set showcmd         " show last command in bottom bar
 set showmatch       " bracket highlighting
 set spell           " spell checking
 set visualbell      " die beep, die
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
 " visual autocomplete for command menu
 set wildmenu
@@ -54,4 +55,8 @@ let NERDTreeMapAtivateNode='<right>'
 let NERDTreeShowHidden=1
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>j :NERDTreeFind<CR>
+
+" airline
+let g:airline_powerline_fonts=1
+let g:airline_theme='solarized'
 
