@@ -6,6 +6,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-surround'
+Plug 'vim-syntastic/syntastic'
 
 call plug#end()
 
