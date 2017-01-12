@@ -4,6 +4,8 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'junegunn/goyo.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
+Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
@@ -18,7 +20,7 @@ syntax on
 set tabstop=2       " visual spaces per tab
 set softtabstop=2   " number of spaces inserted with <TAB>
 set expandtab       " converts tabs -> spaces
- 
+
 " better whitespace characters
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 
