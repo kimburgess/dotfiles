@@ -17,7 +17,10 @@ syntax on
 " tab spacing
 set tabstop=2       " visual spaces per tab
 set softtabstop=2   " number of spaces inserted with <TAB>
-set expandtab 	    " converts tabs -> spaces
+set expandtab       " converts tabs -> spaces
+ 
+" better whitespace characters
+set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 
 " indentation
 set autoindent
