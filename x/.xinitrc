@@ -1,6 +1,6 @@
 xrandr --output Virtual-1 --mode 1440x900
 
-xrdb ~/.Xresources
+xrdb -merge ~/.Xresources
 
 # wallpaper
 feh --bg-scale '/home/kim/wallpaper/sprectrum.png'
