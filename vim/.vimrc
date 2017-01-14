@@ -1,6 +1,7 @@
 call plug#begin('~/,vim/plugged')
 
 Plug 'scrooloose/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -29,7 +30,6 @@ set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 
 " indentation
 set autoindent
-set smartindent
 
 " UI
 set laststatus=2    " always show status line
