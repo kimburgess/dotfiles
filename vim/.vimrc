@@ -10,6 +10,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-surround'
 Plug 'vim-syntastic/syntastic'
 Plug 'elzr/vim-json'
+Plug 'raimondi/delimitmate'
 
 call plug#end()
 
