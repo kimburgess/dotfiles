@@ -1,4 +1,4 @@
-call plug#begin('~/,vim/plugged')
+call plug#begin('~/.vim/bundle')
 
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
