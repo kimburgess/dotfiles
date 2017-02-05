@@ -1,16 +1,15 @@
-! Fonts
-Xft.lcdfilter:  lcddefault
-Xft.dpi:        220
-Xft.antialias:  true
-Xft.rgba:       rgb
-Xft.hinting:    true
-Xft.autohint:	  true
-Xft.hintstyle:  hintfull
+Xft.lcdfilter:          lcddefault
+Xft.dpi:                220
+Xft.antialias:          true
+Xft.rgba:               rgb
+Xft.hinting:            true
+Xft.autohint:           true
+Xft.hintstyle:          hintfull
 
+URxvt.font:             xft: Roboto Mono for Powerline:style=Regular
+URxvt.boldfont:         xft: Roboto Mono Bold for Powerline:style=Bold
+URxvt*scrollBar:        false
 
-URxvt.font:xft:		Roboto Mono for Powerline:style=Regular:pixelsize=12
-URxvt.boldfont:xft:	Roboto Mono Bold for Powerline:style=Bold:pixelsize=12
-URxvt*scrollBar: 	false
 Xcursor.theme:          whiteglass
 Xcursor.size:           36
 
