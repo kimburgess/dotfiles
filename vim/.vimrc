@@ -11,7 +11,6 @@ Plug 'tpope/vim-surround'
 Plug 'vim-syntastic/syntastic'
 Plug 'elzr/vim-json'
 Plug 'raimondi/delimitmate'
-Plug 'valloric/youcompleteme'
 
 call plug#end()
 
