@@ -11,7 +11,7 @@ URxvt.boldfont:         xft: Roboto Mono Bold for Powerline:style=Bold
 URxvt*scrollBar:        false
 
 Xcursor.theme:          whiteglass
-Xcursor.size:           36
+Xcursor.size:           32
 
 
 ! Solarized Dark
