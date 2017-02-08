@@ -38,7 +38,7 @@ set nowrap          " disable line wraps
 set number          " line numbers
 set showcmd         " show last command in bottom bar
 set showmatch       " bracket highlighting
-set spell           " spell checking
+set nospell         " spellcheck off
 set visualbell      " die beep, die
 
 " visual autocomplete for command menu
