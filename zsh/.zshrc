@@ -18,6 +18,11 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 alias pacman="sudo pacman"
 alias update="pacman -Syu"
 
+# git shortcuts
+alias gs="git status"
+alias gc="git commmit"
+alias ga="git add"
+
 # make ls a little nicer for humans
 alias ls="ls -h --color=auto"
 
