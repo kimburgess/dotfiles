@@ -22,8 +22,8 @@ let mapleader=","
 syntax on
 
 " tab spacing
-set tabstop=2       " visual spaces per tab
-set softtabstop=2   " number of spaces inserted with <TAB>
+set tabstop=4       " visual spaces per tab
+set softtabstop=4   " number of spaces inserted with <TAB>
 set expandtab       " converts tabs -> spaces
 
 " better whitespace characters
