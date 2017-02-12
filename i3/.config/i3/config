@@ -162,6 +162,10 @@ bar {
 # Keybinding for i3lock
 bindsym $mod+shift+x exec lock -gt ""
 
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 3
+bindsym XF86MonBrightnessDown exec xbacklight -dec 3
+
 # wallpaper
 exec_always feh --bg-scale ~/wallpaper.jpg
 
