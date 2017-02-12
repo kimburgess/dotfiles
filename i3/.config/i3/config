@@ -109,7 +109,7 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # worspace app targets
-assign [class="Chromium"] $workspace1
+# assign [class="Chromium"] $workspace1
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -145,10 +145,10 @@ client.unfocused        $inactive-bg-colour $inactive-bg-colour $inactive-text-c
 client.focused_inactive $inactive-bg-colour $inactive-bg-colour $inactive-text-colour $inactive-indicator-colour
 client.urgent           $urgent-bg-colour   $urgent-bg-colour   $text-colour          $00ff00
 
-# Start i3bar to display a workspace bar (plus the system information i3status
+# Start i3bar to display a workspace bar (plus the system information i3blocks
 # finds out, if available)
 bar {
-        status_command i3status
+        status_command i3blocks
         colors {
                 background $bg-colour
                 separator #757575
