@@ -60,7 +60,12 @@ let NERDTreeShowHidden=1
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>j :NERDTreeFind<CR>
 
+" syntasic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 " airline
 let g:airline_powerline_fonts=1
 let g:airline_theme='solarized'
-
