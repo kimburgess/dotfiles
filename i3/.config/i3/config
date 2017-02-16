@@ -73,16 +73,16 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # workspace names
-set $workspace1 "1: Browser "
-set $workspace2 "2: Terminals "
-set $workspace3 "3: Editor "
-set $workspace4 "4"
-set $workspace5 "5"
-set $workspace6 "6"
-set $workspace7 "7"
-set $workspace8 "8"
-set $workspace9 "9: Comms "
-set $workspace10 "10: Tunes "
+set $workspace1 " 1 "
+set $workspace2 " 2 "
+set $workspace3 " 3 "
+set $workspace4 " 4 "
+set $workspace5 " 5 "
+set $workspace6 " 6 "
+set $workspace7 " 7 "
+set $workspace8 " 8 "
+set $workspace9 " 9 "
+set $workspace10 " 0 "
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -153,7 +153,7 @@ bar {
                 background $bg-colour
                 separator #757575
                 #                  border              background          text
-                focused_workspace  $bg-colour          $bg-colour          $text-colour
+                focused_workspace  #ffffff             #ffffff             $inactive-text-colour
                 inactive_workspace $inactive-bg-colour $inactive-bg-colour $inactive-text-colour
                 urgent_workspace   $urgent-bg-colour   $urgent-bg-colour   $text-colour
         }
