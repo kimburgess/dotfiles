@@ -32,6 +32,7 @@ set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 
 " indentation
 set autoindent
+set shiftwidth=4
 
 " UI
 set laststatus=2    " always show status line
