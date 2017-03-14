@@ -1,4 +1,4 @@
-# vi edit mode 
+# vi edit mode
 bindkey -v
 export KEYTIMEOUT=10
 
@@ -48,7 +48,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # oh-my-zsh install path
 export ZSH=$HOME/.oh-my-zsh
 
-# prefs 
+# prefs
 ZSH_THEME="geometry/geometry"
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
@@ -60,4 +60,6 @@ source $ZSH/oh-my-zsh.sh
 
 # geometry options
 GEOMETRY_PROMPT_PLUGINS=(docker_machine exec_time git)
+PROMPT_GEOMETRY_COLORIZE_SYMBOL="true"
+PROMPT_GEOMETRY_COLORIZE_ROOT="true"
 
