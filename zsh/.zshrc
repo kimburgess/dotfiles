@@ -56,10 +56,13 @@ HIST_STAMPS="yyyy-mm-dd"
 
 # plugins
 plugins=(git vi-mode z npm bower docker node)
-source $ZSH/oh-my-zsh.sh
 
 # geometry options
 GEOMETRY_PROMPT_PLUGINS=(docker_machine exec_time git)
-PROMPT_GEOMETRY_COLORIZE_SYMBOL="true"
 PROMPT_GEOMETRY_COLORIZE_ROOT="true"
+GEOMETRY_SYMBOL_GIT_DIRTY="○"
+GEOMETRY_SYMBOL_GIT_CLEAN="●"
+GEOMETRY_SYMBOL_GIT_BARE="◌"
+
+source $ZSH/oh-my-zsh.sh
 
