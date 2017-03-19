@@ -12,6 +12,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'elzr/vim-json'
 Plug 'raimondi/delimitmate'
 Plug 'valloric/youcompleteme'
+Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
 
@@ -20,7 +21,7 @@ call plug#end()
 let mapleader=","
 
 " enable syntax processing
-syntax on
+syntax enable
 
 " tab spacing
 set tabstop=4       " visual spaces per tab
@@ -42,6 +43,9 @@ set showcmd         " show last command in bottom bar
 set showmatch       " bracket highlighting
 set nospell         " spellcheck off
 set visualbell      " die beep, die
+set list            " show hidden characters
+set background=dark
+colorscheme solarized
 
 " visual autocomplete for command menu
 set wildmenu
