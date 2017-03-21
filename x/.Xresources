@@ -10,6 +10,10 @@ URxvt.font:             xft: Roboto Mono for Powerline:style=Regular
 URxvt.boldfont:         xft: Roboto Mono Bold for Powerline:style=Bold
 URxvt*scrollBar:        false
 
+URxvt.perl-ext-common:  default,matcher,selection-to-clipboard
+URxvt.url-launcher:     /usr/bin/xdg-open
+URxvt.matcher.button:   1
+
 Xcursor.theme:          whiteglass
 Xcursor.size:           32
 
