@@ -3,3 +3,5 @@
 	email = kim@simple.industries
 [core]
 	editor = vim
+[alias]
+	graph = log --graph --oneline --decorate
