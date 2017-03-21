@@ -13,6 +13,13 @@ Plug 'elzr/vim-json'
 Plug 'raimondi/delimitmate'
 Plug 'valloric/youcompleteme'
 Plug 'altercation/vim-colors-solarized'
+Plug 'kana/vim-textobj-user'
+Plug 'reedes/vim-pencil'
+Plug 'reedes/vim-lexical'
+Plug 'reedes/vim-litecorrect'
+Plug 'reedes/vim-textobj-quote'
+Plug 'reedes/vim-textobj-sentence'
+Plug 'reedes/vim-colors-pencil'
 
 call plug#end()
 
@@ -73,3 +80,58 @@ let g:syntastic_check_on_wq = 0
 " airline
 let g:airline_powerline_fonts=1
 let g:airline_theme='solarized'
+
+" Goyo set F5 to goyo
+nmap <F5> :Goyo<cr>
+
+" Nice markdown / text editing
+function! Prose()
+  call pencil#init()
+  call lexical#init()
+  call litecorrect#init()
+  call textobj#quote#init()
+  call textobj#sentence#init()
+
+  " manual reformatting shortcuts
+  nnoremap <buffer> <silent> Q gqap
+  xnoremap <buffer> <silent> Q gq
+  nnoremap <buffer> <silent> <leader>Q vapJgqap
+
+  " force top correction on most recent misspelling
+  nnoremap <buffer> <c-s> [s1z=<c-o>
+  inoremap <buffer> <c-s> <c-g>u<Esc>[s1z=`]A<c-g>u
+
+  " replace common punctuation
+  iabbrev <buffer> -- –
+  iabbrev <buffer> --- —
+  iabbrev <buffer> << «
+  iabbrev <buffer> >> »
+
+  " open most folds
+  setlocal foldlevel=6
+
+  " replace typographical quotes (reedes/vim-textobj-quote)
+  map <silent> <buffer> <leader>qc <Plug>ReplaceWithCurly
+  map <silent> <buffer> <leader>qs <Plug>ReplaceWithStraight
+
+  " highlight words (reedes/vim-wordy)
+  noremap <silent> <buffer> <F8> :<C-u>NextWordy<cr>
+  xnoremap <silent> <buffer> <F8> :<C-u>NextWordy<cr>
+  inoremap <silent> <buffer> <F8> <C-o>:NextWordy<cr>
+
+  " spelling
+  let g:lexical#spelllang = ['en_au']
+
+  " colours
+  set background=light
+  colorscheme pencil
+
+  Goyo
+endfunction
+
+" automatically initialize buffer by file type
+autocmd FileType markdown,mkd,text call Prose()
+
+" invoke manually by command for other file types
+command! -nargs=0 Prose call Prose()
+
