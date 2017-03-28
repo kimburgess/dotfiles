@@ -58,7 +58,7 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(git vi-mode z npm bower docker node)
 
 # geometry options
-GEOMETRY_PROMPT_PLUGINS=(docker_machine exec_time git)
+GEOMETRY_PROMPT_PLUGINS=(exec_time git)
 PROMPT_GEOMETRY_COLORIZE_ROOT="true"
 GEOMETRY_SYMBOL_GIT_DIRTY="○"
 GEOMETRY_SYMBOL_GIT_CLEAN="●"
