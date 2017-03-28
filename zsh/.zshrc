@@ -66,3 +66,5 @@ GEOMETRY_SYMBOL_GIT_BARE="◌"
 
 source $ZSH/oh-my-zsh.sh
 
+# Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin"

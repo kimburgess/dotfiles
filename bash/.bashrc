@@ -29,6 +29,9 @@ alias grep="grep --color=auto"
 alias fgrep="grep --color=auto"
 alias egrep="grep --color=auto"
 
+# Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin"
+
 # If not running interactively, don't do anything further
 [[ $- != *i* ]] && return
 
