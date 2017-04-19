@@ -66,7 +66,7 @@ set hlsearch        " highlight matches
 nnoremap <leader><space> :nohlsearch<CR>
 
 " make leaving insert mode suck less
-inoremap jj <esc>
+inoremap jk <esc>
 
 " NERDTree config
 let NERDTreeMapAtivateNode='<right>'
