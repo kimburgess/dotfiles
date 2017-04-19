@@ -8,6 +8,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-sleuth'
 Plug 'vim-syntastic/syntastic'
 Plug 'elzr/vim-json'
 Plug 'raimondi/delimitmate'
@@ -20,6 +21,8 @@ Plug 'reedes/vim-litecorrect'
 Plug 'reedes/vim-textobj-quote'
 Plug 'reedes/vim-textobj-sentence'
 Plug 'reedes/vim-colors-pencil'
+Plug 'jeetsukumaran/vim-indentwise'
+Plug 'rhysd/vim-crystal'
 
 call plug#end()
 
