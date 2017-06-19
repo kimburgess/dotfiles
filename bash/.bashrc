@@ -32,6 +32,9 @@ alias egrep="grep --color=auto"
 # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.rvm/bin"
 
+# Add .local to path (used by purescript)
+export PATH="$PATH:$HOME/.local/bin"
+
 # If not running interactively, don't do anything further
 [[ $- != *i* ]] && return
 

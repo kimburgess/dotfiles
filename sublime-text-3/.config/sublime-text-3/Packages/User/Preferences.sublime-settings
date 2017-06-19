@@ -1,15 +1,19 @@
 {
-    "color_scheme": "Packages/User/SublimeLinter/base16-ocean.dark (SL).tmTheme",
-    "draw_white_space": "all",
-    "ensure_newline_at_eof_on_save": true,
-    "font_size": 14,
-    "highlight_line": true,
-    "rulers":
-    [
-        80
-    ],
-    "spacegray_tabs_font_large": true,
-    "theme": "Spacegray.sublime-theme",
-    "translate_tabs_to_spaces": true,
-    "trim_trailing_white_space_on_save": true
+	"color_scheme": "Packages/User/SublimeLinter/base16-ocean.dark (SL).tmTheme",
+	"draw_white_space": "all",
+	"ensure_newline_at_eof_on_save": true,
+	"font_size": 14,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"rulers":
+	[
+		80
+	],
+	"spacegray_tabs_font_large": true,
+	"theme": "Spacegray.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
 }

@@ -71,4 +71,7 @@ source $ZSH/oh-my-zsh.sh
 # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.rvm/bin"
 
+# Add .local to path
+export PATH="$PATH:$HOME/.local/bin"
+
 export PATH="$HOME/.yarn/bin:$PATH"

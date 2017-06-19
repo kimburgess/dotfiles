@@ -23,6 +23,8 @@ Plug 'reedes/vim-textobj-sentence'
 Plug 'reedes/vim-colors-pencil'
 Plug 'jeetsukumaran/vim-indentwise'
 Plug 'rhysd/vim-crystal'
+Plug 'raichoo/purescript-vim'
+Plug 'raichoo/haskell-vim'
 
 call plug#end()
 
