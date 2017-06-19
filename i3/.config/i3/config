@@ -169,8 +169,10 @@ bar {
 bindsym $mod+shift+x exec lock -gt ""
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 3
-bindsym XF86MonBrightnessDown exec xbacklight -dec 3
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 -time 400
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 -time 400
+bindsym $mod+XF86MonBrightnessUp exec xbacklight -inc 1
+bindsym $mod+XF86MonBrightnessDown exec xbacklight -dec 1
 
 # wallpaper
 exec_always feh --bg-scale ~/wallpaper.jpg
