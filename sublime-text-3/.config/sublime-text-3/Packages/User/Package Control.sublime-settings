@@ -1,0 +1,25 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"All Autocomplete",
+		"BracketHighlighter",
+		"Color Highlighter",
+		"DocBlockr",
+		"Git",
+		"GitGutter",
+		"HexViewer",
+		"HTML5",
+		"MarkdownEditing",
+		"Package Control",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"Theme - Spacegray",
+		"Vintageous"
+	]
+}
