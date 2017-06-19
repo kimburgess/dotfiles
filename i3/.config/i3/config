@@ -14,6 +14,8 @@ set $urgent-bg-colour          #E53935
 set $indicator-colour          #00FF00
 set $inactive-indicator-colour #006600
 
+# Remove window titles unless stacked or tabbed
+new_window none
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
