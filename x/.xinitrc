@@ -1,4 +1,4 @@
-xrandr --dpi 220
+xrandr --dpi 144
 
 xrdb -merge ~/.Xresources
 
