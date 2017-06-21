@@ -181,8 +181,11 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 -time 400
 bindsym $mod+XF86MonBrightnessUp exec xbacklight -inc 1
 bindsym $mod+XF86MonBrightnessDown exec xbacklight -dec 1
 
-# wallpaper
-exec_always feh --bg-scale ~/wallpaper.jpg
+# Workspace movement script
+bindsym $mod+grave exec ./workspace.sh new-bg
+bindsym $mod+comma exec ./workspace.sh mobile
+bindsym $mod+period exec ./workspace.sh office
+bindsym $mod+slash exec ./workspace.sh home
 
 # compositor
 exec_always compton -f --xrender-sync-fence
