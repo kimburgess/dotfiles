@@ -16,7 +16,6 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"SublimeHaskell",
 		"Vintage"
 	],
 	"rulers":
