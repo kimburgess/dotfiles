@@ -74,4 +74,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # Add .local to path
 export PATH="$PATH:$HOME/.local/bin"
 
+# Include cabel binaries in path
+export PATH="$PATH:$HOME/.cabal/bin"
+
 export PATH="$HOME/.yarn/bin:$PATH"

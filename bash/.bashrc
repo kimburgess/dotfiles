@@ -35,6 +35,9 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # Add .local to path (used by purescript)
 export PATH="$PATH:$HOME/.local/bin"
 
+# Add cabal binaries to path
+export PATH="$PATH:$HOME/.cabal/bin"
+
 # If not running interactively, don't do anything further
 [[ $- != *i* ]] && return
 
