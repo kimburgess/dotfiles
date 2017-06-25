@@ -2,7 +2,11 @@
 	"added_words":
 	[
 		"Setup",
-		"apps"
+		"apps",
+		"Google",
+		"Analytics",
+		"online",
+		"repo"
 	],
 	"color_scheme": "Packages/User/SublimeLinter/base16-ocean.dark (SL).tmTheme",
 	"dictionary": "Packages/Language - English/en_GB.dic",
