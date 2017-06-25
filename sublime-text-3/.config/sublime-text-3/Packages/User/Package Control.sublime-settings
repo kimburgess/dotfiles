@@ -21,6 +21,7 @@
 		"SublimeCodeIntel",
 		"SublimeHaskell",
 		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
 		"Theme - Spacegray",
 		"Vintageous"
 	]
