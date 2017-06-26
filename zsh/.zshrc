@@ -42,6 +42,9 @@ alias grep="grep --color=auto"
 alias fgrep="grep --color=auto"
 alias egrep="grep --color=auto"
 
+# color GHCi output
+alias ghci="ghci 2>&1 | HsColour -tty"
+
 # syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
