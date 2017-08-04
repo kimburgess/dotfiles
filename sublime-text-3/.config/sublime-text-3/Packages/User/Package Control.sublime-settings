@@ -9,6 +9,7 @@
 		"All Autocomplete",
 		"BracketHighlighter",
 		"Color Highlighter",
+		"Crystal",
 		"DocBlockr",
 		"Git",
 		"GitGutter",
@@ -21,8 +22,11 @@
 		"SublimeCodeIntel",
 		"SublimeHaskell",
 		"SublimeLinter",
+		"SublimeLinter-contrib-alex",
 		"SublimeLinter-contrib-eslint",
+		"SublimeLinter-contrib-tslint",
 		"Theme - Spacegray",
+		"TypeScript",
 		"Vintageous"
 	]
 }
