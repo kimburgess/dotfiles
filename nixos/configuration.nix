@@ -4,6 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix
+      ./yubikey-gpg.nix
     ];
 
   boot = {
@@ -67,8 +68,6 @@
   time.timeZone = "Australia/Brisbane";
 
   services = {
-    pcscd.enable = true;
-
     # dnscrypt-proxy.enable = true;
 
     xserver = {
@@ -121,12 +120,6 @@
     which
     xclip
     xorg.xbacklight
-
-    # crypto
-    gnupg
-    pinentry_ncurses
-    yubikey-manager
-    yubikey-personalization
 
     # dev
     atom
