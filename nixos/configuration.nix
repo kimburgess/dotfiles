@@ -94,6 +94,15 @@
     };
   };
 
+  virtualisation = {
+    virtualbox.host = {
+      enable = true;
+      enableHardening = true;
+    };
+
+    docker.enable = true;
+  };
+
   programs = {
     fish.enable = true;
     vim.defaultEditor = true;
@@ -130,6 +139,7 @@
     nodejs
     rubocop
     ruby
+    vagrant
     vim
     wireshark
 
@@ -192,7 +202,7 @@
         isNormalUser = true;
         home = "/home/kim";
         description = "Kim Burgess";
-        extraGroups = [ "wheel" "networkmanager" ];
+        extraGroups = [ "wheel" "networkmanager" "vboxusers" ];
         hashedPassword = "$6$LG/3rGeWt$ngPvaxukpTybvpaIIDCoXZEjpupaWqsXHZolXNkS.LhbNX3PH6U7SebWjWtF09oKfWWO.oy4EeXF.fHAI768B.";
       };
     };
