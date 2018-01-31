@@ -4,6 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix
+      ./locale.nix
       ./yubikey-gpg.nix
     ];
 
@@ -43,6 +44,7 @@
   hardware = {
     cpu.intel.updateMicrocode = true;
     bluetooth.enable = true;
+    pulseaudio.enable = true;
   };
 
   networking = {
@@ -61,11 +63,7 @@
 
   i18n = {
     consoleFont = "Lat2-Terminus16";
-    consoleKeyMap = "us";
-    defaultLocale = "en_AU.UTF-8";
   };
-
-  time.timeZone = "Australia/Brisbane";
 
   services = {
     # dnscrypt-proxy.enable = true;
@@ -73,8 +71,6 @@
     xserver = {
       enable = true;
       dpi = 144;
-      layout = "us";
-      xkbOptions = "eurosign:e";
       libinput.enable = true;
 
       displayManager.lightdm.enable = true;
@@ -85,27 +81,36 @@
       };
     };
 
+    logind.lidSwitch = "ignore";
+
     redshift = {
       enable = true;
-      latitude = "-27.4698";
-      longitude = "153.0251";
       temperature.day = 6500;
       temperature.night = 2700;
+    };
+
+    printing = {
+      enable = true;
+      drivers = [ pkgs.gutenprint ];
     };
   };
 
   virtualisation = {
-    virtualbox.host = {
-      enable = true;
-      enableHardening = true;
-    };
-
+    virtualbox.host.enable = true;
     docker.enable = true;
   };
 
   programs = {
     fish.enable = true;
     vim.defaultEditor = true;
+    tmux = {
+      enable = true;
+      keyMode = "vi";
+      extraTmuxConf = ''
+        set -g mouse on
+        set -g history-limit 30000
+      '';
+    };
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -116,31 +121,33 @@
     busybox
     dmenu
     feh
+    haskellPackages.xmobar
     htop
     lightdm
     nix-repl
     openconnect
+    pmutils
     psmisc
     stow
     sudo
-    tmux
     upower
     wget
     which
     xclip
     xorg.xbacklight
+    xorg.xrandr
 
     # dev
     atom
     cabal-install
     cabal2nix
+    docker_compose
     ghc
     gitAndTools.gitFull
     nodejs
     rubocop
     ruby
     vagrant
-    vim
     wireshark
 
     # browser
@@ -202,7 +209,13 @@
         isNormalUser = true;
         home = "/home/kim";
         description = "Kim Burgess";
-        extraGroups = [ "wheel" "networkmanager" "vboxusers" ];
+        extraGroups = [
+          "wheel"
+          "networkmanager"
+          "docker"
+          "vboxusers"
+          "audio"
+        ];
         hashedPassword = "$6$LG/3rGeWt$ngPvaxukpTybvpaIIDCoXZEjpupaWqsXHZolXNkS.LhbNX3PH6U7SebWjWtF09oKfWWO.oy4EeXF.fHAI768B.";
       };
     };
