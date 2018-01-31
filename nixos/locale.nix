@@ -9,9 +9,4 @@
     services.xserver.layout = "us";
 
     time.timeZone = "Australia/Brisbane";
-
-    redshift = {
-      latitude = "-27.4698";
-      longitude = "153.0251";
-    };
 }
