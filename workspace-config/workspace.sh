@@ -7,7 +7,7 @@ EXT=DP2
 setup_office() {
     xrandr \
         --output $INT --mode 3840x2160 --scale 0.7x0.7 \
-        --output $EXT --mode 3840x2160 --right-of $INT
+        --output $EXT --mode 3840x2160 --right-of $INT --primary
     xbacklight -set 100 -time 600
     new_bg
 }
@@ -15,14 +15,15 @@ setup_office() {
 setup_home() {
     xrandr \
         --output $INT --mode 3840x2160 --scale 0.7x0.7 \
-        --output $EXT --mode 3840x2160 --above $INT
+        --output $EXT --mode 3840x2160 --above $INT --primary
     xbacklight -set 80 -time 600
     new_bg
 }
 
 setup_mobile() {
+    xrandr --output $INT --off
     xrandr \
-        --output $INT --mode 3840x2160 --scale 0.7x0.7 \
+        --output $INT --mode 3840x2160 --scale 1x1 \
         --output $EXT --off
     xbacklight -set 60 -time 600
     new_bg
