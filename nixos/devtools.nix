@@ -19,7 +19,6 @@
 
   fonts.fonts = with pkgs;
     [ fira-code
-      font-awesome-ttf
       iosevka
       powerline-fonts
     ];

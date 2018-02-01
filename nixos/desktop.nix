@@ -25,13 +25,15 @@
     let
       desktop = with pkgs; [ dmenu lightdm haskellPackages.xmobar ];
       x = with pkgs.xorg; [ xbacklight xrandr ];
-      tools = with pkgs; [ feh xclip ];
+      tools = with pkgs; [ feh xclip scrot ];
       browsers = with pkgs; [ chromium firefox ];
     in desktop ++ x ++ tools ++ browsers;
 
   fonts.fonts = with pkgs;
     [ corefonts
       dejavu_fonts
+      font-awesome-ttf
+      noto-fonts-cjk
       ubuntu_font_family
       source-code-pro
       source-sans-pro
