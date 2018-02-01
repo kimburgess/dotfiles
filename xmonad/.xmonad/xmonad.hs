@@ -23,7 +23,7 @@ main = do
     , layoutHook = avoidStruts  $  layoutHook defaultConfig
     , logHook = dynamicLogWithPP xmobarPP
                   { ppOutput = hPutStrLn xmproc
-                  , ppTitle = xmobarColor "green" "" . shorten 50
+                  , ppTitle = xmobarColor "white" "" . shorten 100
                   }
     , modMask = modKey
     , terminal = "alacritty"
