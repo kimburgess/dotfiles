@@ -10,6 +10,7 @@
       ./shell.nix
       ./desktop.nix
       ./devtools.nix
+      ./media.nix
       ./yubikey-gpg.nix
     ];
 }
