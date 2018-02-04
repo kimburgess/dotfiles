@@ -18,5 +18,9 @@
   # FIXME: there seems to be some issues with stability of this
   # services.dnscrypt-proxy.enable = true;
 
-  environment.systemPackages = [ pkgs.openconnect ];
+  environment.systemPackages = with pkgs;
+    [
+      wirelesstools
+      openconnect
+    ];
 }
