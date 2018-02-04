@@ -7,7 +7,7 @@ Config
   , fgColor = "grey"
   , position = TopW L 100
   , commands =
-      [ Run Wireless "wlp1s0" ["-t","<essid>"] 10
+      [ Run Wireless "wlp1s0" ["-t","<essid> <fc=#555555><quality>%</fc>"] 10
       , Run Cpu ["-t","<total>%","-p","3","-L","3","-H","70","--high","red"] 10
       , Run Memory ["-t","<usedratio>%","-p","3","-H","80","--high","red"] 10
       , Run Battery ["-t","<left>%","-p","3"] 20
