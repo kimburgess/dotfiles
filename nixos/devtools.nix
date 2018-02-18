@@ -14,7 +14,7 @@
       ruby_ = with pkgs; [ ruby rubocop ];
       node = with pkgs; [ nodejs ];
       env = with pkgs; [ docker_compose vagrant ];
-      tools = with pkgs; [ gitAndTools.gitFull wireshark ];
+      tools = with pkgs; [ gitAndTools.gitFull wireshark unstable.teleport ];
     in editors ++ nix ++ haskell ++ ruby_ ++ node ++ env ++ tools;
 
   fonts.fonts = with pkgs;
