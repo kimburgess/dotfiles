@@ -20,7 +20,6 @@
 
   environment.systemPackages = with pkgs;
     [ alacritty
-      busybox
       htop
       openssl
       pmutils
