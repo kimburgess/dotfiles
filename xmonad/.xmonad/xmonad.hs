@@ -18,14 +18,14 @@ customKeys =
 main = do
   xmproc <- spawnPipe "xmobar"
 
-  xmonad $ docks defaultConfig
-    { manageHook = manageDocks <+> manageHook defaultConfig
-    , layoutHook = avoidStruts  $  layoutHook defaultConfig
-    , logHook = dynamicLogWithPP xmobarPP
-                  { ppOutput = hPutStrLn xmproc
-                  , ppTitle = xmobarColor "white" "" . shorten 100
-                  }
-    , modMask = modKey
-    , terminal = "alacritty"
+  xmonad $ docks def
+    { manageHook = manageDocks <+> manageHook def
+    , layoutHook = avoidStruts  $  layoutHook def
+    , logHook    = dynamicLogWithPP xmobarPP
+                     { ppOutput = hPutStrLn xmproc
+                     , ppTitle  = xmobarColor "white" "" . shorten 100
+                     }
+    , modMask    = modKey
+    , terminal   = "alacritty"
     }
     `additionalKeys` customKeys
