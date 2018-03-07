@@ -19,8 +19,7 @@ main = do
   xmproc <- spawnPipe "xmobar"
 
   xmonad $ docks def
-    { manageHook = manageDocks <+> manageHook def
-    , layoutHook = avoidStruts  $  layoutHook def
+    { layoutHook = avoidStruts  $  layoutHook def
     , logHook    = dynamicLogWithPP xmobarPP
                      { ppOutput = hPutStrLn xmproc
                      , ppTitle  = xmobarColor "white" "" . shorten 100
