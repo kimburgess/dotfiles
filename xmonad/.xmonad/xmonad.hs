@@ -1,8 +1,11 @@
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
-import XMonad.Util.Run(spawnPipe)
-import XMonad.Util.EZConfig(additionalKeys)
+import XMonad.Hooks.ManageHelpers
+import XMonad.Layout.Named (named)
+import XMonad.Layout.NoBorders (noBorders, smartBorders)
+import XMonad.Util.Run (spawnPipe)
+import XMonad.Util.EZConfig (additionalKeys)
 import System.IO
 
 modKey = mod4Mask  -- win key
@@ -15,11 +18,27 @@ customKeys =
   , ((modKey, xK_b),           sendMessage ToggleStruts)
   ]
 
+windowActions = composeOne
+  [ transience
+  , isFullscreen -?> doFullFloat
+  , isDialog -?> doCenterFloat
+  ]
+
+layouts = avoidStruts $ smartBorders $
+  (tall ||| wide ||| full)
+  where
+    base = Tall 1 (3/100) (1/2)
+    --
+    tall = named "tall" $ base
+    wide = named "wide" $ Mirror base
+    full = named "full" $ noBorders Full
+
 main = do
   xmproc <- spawnPipe "xmobar"
 
   xmonad $ docks def
-    { layoutHook = avoidStruts  $  layoutHook def
+    { manageHook = windowActions <+> manageHook def
+    , layoutHook = layouts
     , logHook    = dynamicLogWithPP xmobarPP
                      { ppOutput = hPutStrLn xmproc
                      , ppTitle  = xmobarColor "white" "" . shorten 100
