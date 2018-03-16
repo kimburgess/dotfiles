@@ -6,15 +6,15 @@
       docker.enable = true;
     };
 
-  environment.systemPackages =
+  environment.systemPackages = with pkgs;
     let
-      editors = with pkgs; [ atom vim ];
-      nix = with pkgs; [ cabal2nix nix-repl ];
-      haskell = with pkgs; [ ghc cabal-install ];
-      ruby_ = with pkgs; [ ruby rubocop ];
-      node = with pkgs; [ nodejs ];
-      env = with pkgs; [ docker_compose vagrant ];
-      tools = with pkgs; [ gitAndTools.gitFull wireshark unstable.teleport ];
+      editors = [ atom vim ];
+      nix = [ cabal2nix nix-repl ];
+      haskell = [ ghc cabal-install ];
+      ruby_ = [ ruby rubocop ];
+      node = [ nodejs ];
+      env = [ docker_compose vagrant ];
+      tools = [ gitAndTools.gitFull git-lfs wireshark unstable.teleport ];
     in editors ++ nix ++ haskell ++ ruby_ ++ node ++ env ++ tools;
 
   fonts.fonts = with pkgs;
