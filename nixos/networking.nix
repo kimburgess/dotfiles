@@ -6,6 +6,8 @@
 
     networkmanager.enable = true;
 
+    usePredictableInterfaceNames = false;
+
     firewall =
       { enable = true;
         allowPing = true;
