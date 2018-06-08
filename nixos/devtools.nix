@@ -10,7 +10,7 @@
     let
       editors = [ atom vim ];
       nix = [ cabal2nix nix-repl ];
-      haskell = [ ghc cabal-install ];
+      haskell = [ ghc cabal-install haskellPackages.ghc-mod ];
       ruby_ = [ ruby rubocop ];
       node = [ nodejs ];
       env = [ docker_compose vagrant ];
