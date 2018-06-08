@@ -9,4 +9,10 @@
   services.xserver.layout = "us";
 
   time.timeZone = "Australia/Brisbane";
+
+  environment.systemPackages = with pkgs;
+    [ hunspell
+      hunspellDicts.en-gb-ise
+      hunspellDicts.en-us
+    ];
 }
