@@ -6,34 +6,34 @@ EXT=DP2
 
 setup_office() {
     xrandr \
-        --output $INT --mode 3840x2160 --scale 0.7x0.7 \
-        --output $EXT --mode 3840x2160 --right-of $INT --primary
+        --output $INT --mode 3840x2160 --scale 0.7x0.7 --primary \
+        --output $EXT --mode 3840x2160 --right-of $INT
     xbacklight -set 100 -time 600
-    new_bg
+    # set_rand_bg
 }
 
 setup_home() {
     xrandr \
-        --output $INT --mode 3840x2160 --scale 0.7x0.7 \
-        --output $EXT --mode 3840x2160 --above $INT --primary
+        --output $INT --mode 3840x2160 --scale 0.7x0.7 --primary \
+        --output $EXT --mode 3840x2160 --above $INT
     xbacklight -set 80 -time 600
-    new_bg
+    # set_rand_bg
 }
 
 setup_mobile() {
     xrandr --output $INT --off
     xrandr \
-        --output $INT --mode 3840x2160 --scale 1x1 \
+        --output $INT --mode 3840x2160 --scale 1x1 --primary \
         --output $EXT --off
     xbacklight -set 60 -time 600
-    new_bg
+    # set_rand_bg
 }
 
 rand_colour() {
     echo "#$(openssl rand -hex 3)"
 }
 
-new_bg() {
+set_rand_bg() {
     local grad=$(rand_colour)-$(rand_colour)
     convert \
         -size 3840x2160 \
