@@ -7,16 +7,8 @@ EXT=DP2
 setup_office() {
     xrandr \
         --output $INT --mode 3840x2160 --scale 0.7x0.7 --primary \
-        --output $EXT --mode 3840x2160 --right-of $INT
+        --output $EXT --mode 3840x2160 --rotate left --right-of $INT
     xbacklight -set 100 -time 600
-    # set_rand_bg
-}
-
-setup_home() {
-    xrandr \
-        --output $INT --mode 3840x2160 --scale 0.7x0.7 --primary \
-        --output $EXT --mode 3840x2160 --above $INT
-    xbacklight -set 80 -time 600
     # set_rand_bg
 }
 
@@ -46,9 +38,8 @@ set -eo pipefail
 
 case "$1" in
     office)     setup_office;;
-    home)       setup_home;;
     mobile)     setup_mobile;;
     new-bg)     new_bg;;
-    "")         echo "Usage: ./workspace <office|mobile|home>" && exit 1;;
+    "")         echo "Usage: ./workspace <office|mobile>" && exit 1;;
     *)          echo "No workspace setup defined for $1" && exit 1;;
 esac
