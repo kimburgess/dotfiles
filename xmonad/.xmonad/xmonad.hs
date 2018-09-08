@@ -1,4 +1,5 @@
 import XMonad
+import XMonad.Actions.UpdatePointer
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ManageHelpers
@@ -43,6 +44,7 @@ main = do
                      { ppOutput = hPutStrLn xmproc
                      , ppTitle  = xmobarColor "white" "" . shorten 100
                      }
+                    >> updatePointer (0.5, 0.5) (0, 0)
     , modMask    = modKey
     , terminal   = "alacritty"
     }
