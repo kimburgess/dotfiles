@@ -55,6 +55,11 @@
       pulseaudio.enable = true;
     };
 
+  # Kill the internal webcam
+  services.udev.extraRules = ''
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="0bda", ATTRS{idProduct}=="579f", ATTR{authorized}="0"
+  '';
+
   services.logind.lidSwitch = "ignore";
 
   services.printing =
