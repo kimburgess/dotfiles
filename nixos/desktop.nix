@@ -14,6 +14,8 @@
       enableContribAndExtras = true;
     };
 
+  services.xserver.videoDrivers = [ "displaylink" ];
+
   services.redshift = {
     enable = true;
     provider = "geoclue2";
