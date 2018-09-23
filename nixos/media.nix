@@ -6,6 +6,7 @@
       ffmpeg
       gimp
       puredata
+      pavucontrol
       vlc
     ];
 }
