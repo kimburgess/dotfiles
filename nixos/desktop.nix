@@ -14,7 +14,11 @@
       enableContribAndExtras = true;
     };
 
-  services.xserver.videoDrivers = [ "displaylink" ];
+  services.xserver.videoDrivers = [ "intel" "displaylink" ];
+
+  services.xserver.deviceSection = ''
+    Option "Backlight" "intel_backlight"
+  '';
 
   services.redshift = {
     enable = true;
