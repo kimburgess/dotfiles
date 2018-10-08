@@ -11,12 +11,17 @@ import System.IO
 
 modKey = mod4Mask  -- win key
 
+xK_XF86MonBrightnessUp   = 0x1008FF02
+xK_XF86MonBrightnessDown = 0x1008FF03
+
 customKeys =
-  [ ((modKey, xK_x),           spawn "dm-tool lock")
-  , ((modKey, xK_Escape),      spawn "sudo pm-suspend")
-  , ((controlMask, xK_Print),  spawn "sleep 0.2; scrot -s")
-  , ((0, xK_Print),            spawn "scrot")
-  , ((modKey, xK_b),           sendMessage ToggleStruts)
+  [ ((modKey, xK_x),                spawn "dm-tool lock")
+  , ((modKey, xK_Escape),           spawn "sudo pm-suspend")
+  , ((controlMask, xK_Print),       spawn "sleep 0.2; scrot -s")
+  , ((0, xK_Print),                 spawn "scrot")
+  , ((modKey, xK_b),                sendMessage ToggleStruts)
+  , ((0, xK_XF86MonBrightnessUp),   spawn "xbacklight -inc 10 -time 100")
+  , ((0, xK_XF86MonBrightnessDown), spawn "xbacklight -dec 10 -time 100")
   ]
 
 windowActions = composeOne
