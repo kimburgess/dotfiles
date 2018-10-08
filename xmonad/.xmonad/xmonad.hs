@@ -27,7 +27,7 @@ customKeys =
 windowActions = composeOne
   [ transience
   , isFullscreen -?> doFullFloat
-  , isDialog -?> doCenterFloat
+  , isDialog     -?> doCenterFloat
   ]
 
 layouts = avoidStruts $ smartBorders $
