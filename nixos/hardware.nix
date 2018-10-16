@@ -52,7 +52,6 @@
   hardware =
     { cpu.intel.updateMicrocode = true;
       bluetooth.enable = true;
-      pulseaudio.enable = true;
     };
 
   # Kill the internal webcam
