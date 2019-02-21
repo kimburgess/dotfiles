@@ -12,5 +12,6 @@
       ./devtools.nix
       ./media.nix
       ./yubikey-gpg.nix
+      ./gaming.nix
     ];
 }
