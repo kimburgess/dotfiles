@@ -20,12 +20,16 @@
 
   environment.systemPackages = with pkgs;
     [ alacritty
+      unstable.bat
+      gitAndTools.diff-so-fancy
       htop
       openssl
       pmutils
+      unstable.prettyping
       psmisc
       stow
       sudo
+      tldr
       upower
       wget
       which
@@ -38,8 +42,12 @@
     ".."   = "cd ..";
     "..."  = "cd ../..";
     "...." = "cd ../../..";
+
     "gs" = "git status";
     "gc" = "git commit";
     "ga" = "git add";
+
+    "cat" = "bat";
+    "ping" = "prettyping";
   };
 }
