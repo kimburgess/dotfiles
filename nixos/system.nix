@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  system.stateVersion = "18.03";
+  system.stateVersion = "18.09";
   system.autoUpgrade.enable = true;
 
   nixpkgs.config.allowUnfree = true;

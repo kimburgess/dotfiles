@@ -25,12 +25,12 @@
       }).vagrant;
 
       editors = [ atom vim ];
-      nix = [ cabal2nix nix-repl ];
-      haskell = [ ghc cabal-install haskellPackages.ghc-mod ];
+      nix = [ cabal2nix ];
+      haskell = [ ghc cabal-install ];
       ruby_ = [ ruby rubocop ];
       node = [ nodejs ];
       env = [ docker_compose vagrant ];
-      tools = [ gitAndTools.gitFull git-lfs wireshark unstable.teleport ];
+      tools = [ gitAndTools.gitFull git-lfs wireshark teleport ];
     in editors ++ nix ++ haskell ++ ruby_ ++ node ++ env ++ tools;
 
   fonts.fonts = with pkgs;

@@ -20,7 +20,7 @@
 
   environment.systemPackages = with pkgs;
     [ alacritty
-      unstable.bat
+      bat
       gitAndTools.diff-so-fancy
       htop
       openssl
