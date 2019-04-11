@@ -57,7 +57,7 @@ set nospell         " spellcheck off
 set visualbell      " die beep, die
 set list            " show hidden characters
 set background=dark
-colorscheme solarized
+colorscheme Tomorrow-Night-Bright
 
 " visual autocomplete for command menu
 set wildmenu
@@ -139,4 +139,3 @@ autocmd FileType markdown,mkd,text call Prose()
 
 " invoke manually by command for other file types
 command! -nargs=0 Prose call Prose()
-
