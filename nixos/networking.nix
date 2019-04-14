@@ -25,4 +25,6 @@
       wirelesstools
       openconnect
     ];
+
+  services.openssh.enable = true;
 }
