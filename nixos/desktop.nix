@@ -3,6 +3,21 @@
 {
   services.xserver.enable = true;
 
+  services.xserver.xrandrHeads =
+    [ { output = "eDP-1";
+        primary = true;
+        monitorConfig = ''
+          Option "Position" "0 1920"
+        '';
+      }
+      { output = "DP-2";
+        monitorConfig = ''
+          Option "Position" "3840 0"
+          Option "Rotate" "left"
+        '';
+      }
+    ];
+
   services.xserver.libinput.enable = true;
 
   services.xserver.displayManager.lightdm.enable = true;
@@ -14,7 +29,7 @@
       enableContribAndExtras = true;
     };
 
-  services.xserver.videoDrivers = [ "intel" "displaylink" ];
+  services.xserver.videoDrivers = [ "modesetting" "displaylink" ];
 
   services.xserver.deviceSection = ''
     Option "Backlight" "intel_backlight"
