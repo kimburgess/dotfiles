@@ -1,10 +1,16 @@
 [user]
 	name = Kim Burgess
 	email = kim@acaprojects.com
+	signingkey = 5AC2500C198661531EDB4288596F40AE411536EB
 [core]
 	editor = vim
 [alias]
 	graph = log --graph --oneline --decorate
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 [pager]
        diff = diff-so-fancy | less --tabs=1,5 -RFX
        show = diff-so-fancy | less --tabs=1,5 -RFX
