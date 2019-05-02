@@ -29,7 +29,10 @@
       psmisc
       stow
       sudo
+      telnet
       tldr
+      tree
+      unzip
       upower
       wget
       which
