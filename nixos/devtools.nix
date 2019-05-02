@@ -25,13 +25,14 @@
       }).vagrant;
 
       editors = [ atom vim ];
+      crystal = [ unstable.crystal unstable.shards ];
       nix = [ cabal2nix ];
       haskell = [ ghc cabal-install ];
       ruby_ = [ ruby rubocop ];
       node = [ nodejs ];
       env = [ docker_compose vagrant ];
       tools = [ gitAndTools.gitFull git-lfs wireshark teleport ];
-    in editors ++ nix ++ haskell ++ ruby_ ++ node ++ env ++ tools;
+    in editors ++ crystal ++ nix ++ haskell ++ ruby_ ++ node ++ env ++ tools;
 
   fonts.fonts = with pkgs;
     [ fira-code
