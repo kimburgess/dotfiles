@@ -20,7 +20,10 @@
       }
     ];
 
-  services.xserver.libinput.enable = true;
+  services.xserver.libinput =
+    { enable = true;
+      disableWhileTyping = true;
+    };
 
   services.xserver.displayManager.lightdm.enable = true;
 
