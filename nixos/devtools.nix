@@ -31,7 +31,7 @@
       ruby_ = [ ruby rubocop ];
       node = [ nodejs ];
       env = [ docker_compose vagrant ];
-      tools = [ gitAndTools.gitFull git-lfs wireshark teleport ];
+      tools = [ gitAndTools.gitFull git-lfs wireshark teleport httpie ];
     in editors ++ crystal ++ nix ++ haskell ++ ruby_ ++ node ++ env ++ tools;
 
   fonts.fonts = with pkgs;
