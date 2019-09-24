@@ -24,6 +24,7 @@
         ];
       }).vagrant;
 
+      iot = [ arduino ];
       editors = [ atom vim ];
       crystal = [ unstable.crystal unstable.shards ];
       nix = [ cabal2nix ];
@@ -32,7 +33,7 @@
       node = [ nodejs ];
       env = [ docker_compose vagrant ];
       tools = [ gitAndTools.gitFull git-lfs wireshark teleport httpie ];
-    in editors ++ crystal ++ nix ++ haskell ++ ruby_ ++ node ++ env ++ tools;
+    in iot ++ editors ++ crystal ++ nix ++ haskell ++ ruby_ ++ node ++ env ++ tools ++ lib;
 
   fonts.fonts = with pkgs;
     [ fira-code
