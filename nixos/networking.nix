@@ -14,7 +14,7 @@
         allowedTCPPorts = [ 80 443 ];
       };
 
-      # nameservers = [ "127.0.0.1" ];
+      nameservers = [ "8.8.8.8" "8.8.4.4" ];
   };
 
   # FIXME: there seems to be some issues with stability of this
