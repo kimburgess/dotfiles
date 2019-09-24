@@ -1,8 +1,8 @@
 #!/bin/sh
 # Workspace setup for when moving between locations
 
-INT=eDP-1
-EXT=DP-2
+INT=eDP1
+EXT=DP2
 
 setup_office() {
     xrandr \

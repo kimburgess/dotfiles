@@ -34,7 +34,7 @@
       enableContribAndExtras = true;
     };
 
-  services.xserver.videoDrivers = [ "modesetting" "displaylink" ];
+  services.xserver.videoDrivers = [ "intel" "modesetting" ];
 
   services.xserver.deviceSection = ''
     Option "Backlight" "intel_backlight"
