@@ -47,13 +47,16 @@
     temperature.night = 2700;
   };
 
-  services.unclutter.enable = true;
+  services.unclutter-xfixes = {
+    enable = true;
+    extraOptions = [ "ignore-scrolling" ];
+  };
 
   environment.systemPackages =
     let
       desktop = with pkgs; [ dmenu lightdm haskellPackages.xmobar ];
       x = with pkgs.xorg; [ xbacklight xrandr ];
-      tools = with pkgs; [ feh xclip scrot unclutter ];
+      tools = with pkgs; [ feh xclip scrot ];
       browsers = with pkgs; [ chromium firefox ];
     in desktop ++ x ++ tools ++ browsers;
 
