@@ -6,6 +6,8 @@
   programs = {
     fish.enable = true;
 
+    thefuck.enable = true;
+
     vim.defaultEditor = true;
 
     tmux =
