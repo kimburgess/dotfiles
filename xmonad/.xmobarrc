@@ -5,7 +5,7 @@ Config
   , border = TopB
   , bgColor = "black"
   , fgColor = "grey"
-  , position = TopW L 100
+  , position = Bottom
   , commands =
       [ Run Wireless "wlan0" ["-t","<essid> <fc=#555555><quality>%</fc>"] 10
       , Run Cpu ["-t","<total>%","-p","3","-L","3","-H","70","--high","red"] 10

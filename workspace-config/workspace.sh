@@ -6,8 +6,8 @@ EXT=DP2
 
 setup_office() {
     xrandr \
-        --output $INT --mode 3840x2160 --pos 0x1920  \
-        --output $EXT --mode 3840x2160 --pos 3840x0 --rotate left
+        --output $INT --off  \
+        --output $EXT --mode 3840x2160 --rotate left --primary
     xbacklight -set 100 -time 600
     # set_rand_bg
 }
