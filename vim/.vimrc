@@ -6,9 +6,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Editor pimping
-Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'chriskempson/base16-vim'
 Plug 'enomsg/vim-haskellConcealPlus'
 
 " Git
@@ -73,7 +73,9 @@ set nospell         " spellcheck off
 set visualbell      " die beep, die
 set list            " show hidden characters
 set background=dark
-colorscheme Tomorrow-Night-Bright
+let base16colorspace=256
+let g:base16_shell_path='~/.config/base16-shell/scripts'
+colorscheme base16-default-dark
 
 " visual autocomplete for command menu
 set wildmenu
@@ -100,7 +102,7 @@ let g:syntastic_check_on_wq = 0
 
 " airline
 let g:airline_powerline_fonts=1
-let g:airline_theme='tomorrow'
+let g:airline_theme='base16_default'
 
 " Goyo set F5 to goyo
 nmap <F5> :Goyo<cr>
