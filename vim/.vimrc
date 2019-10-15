@@ -1,19 +1,30 @@
 call plug#begin('~/.vim/bundle')
 
+" Files
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'junegunn/goyo.vim'
+
+" Editor pimping
+Plug 'chriskempson/base16-vim'
+Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
-Plug 'pangloss/vim-javascript'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-sleuth'
+
+" Syntax tools
 Plug 'vim-syntastic/syntastic'
-Plug 'elzr/vim-json'
 Plug 'raimondi/delimitmate'
-Plug 'valloric/youcompleteme'
-Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-surround'
+Plug 'jeetsukumaran/vim-indentwise'
+Plug 'tpope/vim-sleuth'
+
+" Lang
+Plug 'pangloss/vim-javascript'
+Plug 'elzr/vim-json'
+Plug 'rhysd/vim-crystal'
+
+" Text
+Plug 'junegunn/goyo.vim'
 Plug 'kana/vim-textobj-user'
 Plug 'reedes/vim-pencil'
 Plug 'reedes/vim-lexical'
@@ -21,16 +32,12 @@ Plug 'reedes/vim-litecorrect'
 Plug 'reedes/vim-textobj-quote'
 Plug 'reedes/vim-textobj-sentence'
 Plug 'reedes/vim-colors-pencil'
-Plug 'jeetsukumaran/vim-indentwise'
-Plug 'rhysd/vim-crystal'
-Plug 'raichoo/purescript-vim'
-Plug 'raichoo/haskell-vim'
 
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let mapleader=","
+let mapleader="\<Space>"
 
 " enable syntax processing
 syntax enable
@@ -84,7 +91,7 @@ let g:syntastic_check_on_wq = 0
 
 " airline
 let g:airline_powerline_fonts=1
-let g:airline_theme='solarized'
+let g:airline_theme='tomorrow'
 
 " Goyo set F5 to goyo
 nmap <F5> :Goyo<cr>
@@ -133,9 +140,6 @@ function! Prose()
 
   Goyo
 endfunction
-
-" automatically initialize buffer by file type
-autocmd FileType markdown,mkd,text call Prose()
 
 " invoke manually by command for other file types
 command! -nargs=0 Prose call Prose()
