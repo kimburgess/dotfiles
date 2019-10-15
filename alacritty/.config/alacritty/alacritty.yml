@@ -50,17 +50,17 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Roboto Mono for Powerline
+    family: Fira Code Retina
     style: Regular
 
   # The bold font face
   bold:
-    family: Roboto Mono for Powerline
+    family: Fira Code Retina
     style: Bold
 
   # The italic font face
   italic:
-    family: Roboto Mono for Powerline
+    family: Fira Code Retina
     style: Italic
 
   # Point size of the font
