@@ -9,6 +9,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'enomsg/vim-haskellConcealPlus'
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -44,6 +45,8 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let mapleader="\<Space>"
+
+set updatetime=100
 
 " enable syntax processing
 syntax enable
