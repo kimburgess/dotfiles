@@ -7,7 +7,6 @@
 
   environment.systemPackages = with pkgs;
     [ gnupg
-      pinentry_ncurses
       yubikey-manager
       yubikey-personalization
     ];
