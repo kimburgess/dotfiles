@@ -25,11 +25,11 @@
       }).vagrant;
 
       iot = [ arduino ];
-      editors = [ atom vim ];
+      editors = [ atom vimHugeX ];
       crystal = [ unstable.crystal unstable.shards ];
-      nix = [ cabal2nix ];
-      haskell = [ ghc cabal-install ];
-      ruby_ = [ ruby rubocop ];
+      nix = [ nix-prefetch-git ];
+      haskell = []; # ghc cabal-install ];
+      ruby_ = [ ruby rubocop bundler ];
       node = [ nodejs ];
       env = [ docker_compose vagrant ];
       tools = [ gitAndTools.gitFull git-lfs wireshark teleport httpie ];

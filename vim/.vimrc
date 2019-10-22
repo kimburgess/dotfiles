@@ -19,6 +19,7 @@ Plug 'shumphrey/fugitive-gitlab.vim'
 Plug 'tommcdo/vim-fubitive'
 
 " Syntax tools
+Plug 'dense-analysis/ale'
 Plug 'vim-syntastic/syntastic'
 Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-surround'
@@ -26,6 +27,7 @@ Plug 'jeetsukumaran/vim-indentwise'
 Plug 'tpope/vim-sleuth'
 
 " Lang
+Plug 'sheerun/vim-polyglot'
 Plug 'pangloss/vim-javascript'
 Plug 'elzr/vim-json'
 Plug 'rhysd/vim-crystal'
