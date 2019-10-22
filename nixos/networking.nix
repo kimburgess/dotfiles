@@ -27,4 +27,12 @@
     ];
 
   services.openssh.enable = true;
+
+  programs.mosh.enable = true;
+
+  services.zerotierone =
+    { enable = true;
+      joinNetworks = [ "a0cbf4b62a4feda5" ];
+      port = 9993;
+    };
 }
