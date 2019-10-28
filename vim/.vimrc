@@ -75,6 +75,7 @@ set nospell         " spellcheck off
 set visualbell      " die beep, die
 set list            " show hidden characters
 set background=dark
+let &colorcolumn=join(range(81,999),",")
 let base16colorspace=256
 let g:base16_shell_path='~/.config/base16-shell/scripts'
 colorscheme base16-default-dark
