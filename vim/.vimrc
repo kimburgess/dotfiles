@@ -65,6 +65,9 @@ set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 set autoindent
 set shiftwidth=4
 
+" wrapping
+set textwidth=80
+
 " UI
 set laststatus=2    " always show status line
 set nowrap          " disable line wraps
