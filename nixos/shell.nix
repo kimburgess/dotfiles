@@ -51,6 +51,7 @@
     "gs" = "git status";
     "gc" = "git commit";
     "ga" = "git add";
+    "gd" = "git diff";
 
     "cat" = "bat";
     "ping" = "prettyping";
