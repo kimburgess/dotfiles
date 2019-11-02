@@ -15,6 +15,10 @@
 
     extraModulePackages = [ ];
 
+    extraModprobeConfig = ''
+      options hid_apple fnmode=2 swap_opt_cmd=1
+    '';
+
     initrd.availableKernelModules = [ "xhci_pci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
 
     initrd.luks.devices =
