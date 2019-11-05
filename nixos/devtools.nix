@@ -7,18 +7,27 @@
     };
 
   environment.systemPackages = with pkgs;
-    let
-      iot = [ arduino ];
-      editors = [ atom vimHugeX ];
-      crystal = [ unstable.crystal unstable.shards ];
-      nix = [ nix-prefetch-git ];
-      haskell = []; # ghc cabal-install ];
-      ruby_ = [ ruby rubocop bundler ];
-      node = [ nodejs ];
-      env = [ docker_compose vagrant ];
-      tools = [ gitAndTools.gitFull git-lfs wireshark teleport httpie ];
-      lib = [ (liblapack.override { shared = true; }) ];
-    in iot ++ editors ++ crystal ++ nix ++ haskell ++ ruby_ ++ node ++ env ++ tools ++ lib;
+    [ arduino
+      atom
+      bundler
+      docker_compose
+      ghc
+      gitAndTools.gitFull
+      git-lfs
+      httpie
+      (liblapack.override { shared = true; })
+      nix-prefetch-git
+      ngrok
+      nodejs
+      rubocop
+      ruby
+      teleport
+      unstable.crystal
+      unstable.shards
+      vagrant
+      vimHugeX
+      wireshark
+    ];
 
   fonts.fonts = with pkgs;
     [ fira-code
