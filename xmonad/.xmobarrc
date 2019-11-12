@@ -1,20 +1,19 @@
 Config
-  { font = "xft:Noto Sans:pixelsize=18,M+ 1c:pixelsize=18"
-  , additionalFonts = [ "xft:FontAwesome:pixelsize=18" ]
+  { font        = "xft:Fira Code Retina:pixelsize=18"
   , borderColor = "black"
-  , border = TopB
-  , bgColor = "black"
-  , fgColor = "grey"
-  , position = Bottom
-  , commands =
+  , border      = TopB
+  , bgColor     = "black"
+  , fgColor     = "grey"
+  , position    = Bottom
+  , commands    =
       [ Run Wireless "wlan0" ["-t","<essid> <fc=#555555><quality>%</fc>"] 10
-      , Run Cpu ["-t","<total>%","-p","3","-L","3","-H","70","--high","red"] 10
-      , Run Memory ["-t","<usedratio>%","-p","3","-H","80","--high","red"] 10
-      , Run Battery ["-t","<left>%","-p","3","-L","10","--low","red"] 20
-      , Run Date "%a %b %_d  %H:%M:%S" "date" 10
+      , Run Cpu              ["-t","<total>%","-p","3","-L","3","-H","70","--high","red"] 10
+      , Run Memory           ["-t","<usedratio>%","-p","3","-H","80","--high","red"] 10
+      , Run Battery          ["-t","<left>%","-p","3","-L","10","--low","red"] 20
+      , Run Date             "%a %b %_d  %H:%M:%S" "date" 10
       , Run StdinReader
       ]
-  , sepChar = "%"
-  , alignSep = "}{"
-  , template = " <fn=1></fn> %cpu%    <fn=1></fn> %memory%    <fn=1></fn> %battery%    <fn=1></fn> %wlan0wi%}%StdinReader%{%date% "
+  , sepChar     = "%"
+  , alignSep    = "}{"
+  , template    = " ■ %cpu%    ● %memory%    ▮ %battery%    ▼ %wlan0wi% }%StdinReader%{ %date% "
   }
