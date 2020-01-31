@@ -19,6 +19,8 @@
       nix-prefetch-git
       ngrok
       nodejs
+      nodePackages.textlint
+      nodePackages.write-good
       rubocop
       ruby
       teleport
