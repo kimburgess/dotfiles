@@ -45,9 +45,10 @@
     Option "Backlight" "intel_backlight"
   '';
 
+  location.provider = "geoclue2";
+
   services.redshift = {
     enable = true;
-    provider = "geoclue2";
     temperature.day = 6500;
     temperature.night = 2700;
   };
