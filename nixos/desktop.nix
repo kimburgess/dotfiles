@@ -69,7 +69,7 @@
   fonts.fonts = with pkgs;
     [ corefonts
       dejavu_fonts
-      font-awesome-ttf
+      font-awesome
       noto-fonts-cjk
       ubuntu_font_family
       source-code-pro
