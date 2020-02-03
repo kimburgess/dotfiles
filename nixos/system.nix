@@ -6,8 +6,6 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  nixpkgs.config.allowBroken = true;
-
   # Enable pulling packages from the unstable branch via unstable.name
   nixpkgs.config.packageOverrides = pkgs:
     { unstable = import <nixos-unstable>
