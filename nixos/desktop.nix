@@ -28,8 +28,7 @@
   services.xserver.displayManager.lightdm.enable = true;
 
   services.xserver.displayManager.setupCommands = ''
-    xrandr --output DP2 --rotate left
-    exit 0
+    xrandr --output DP2 --rotate left || true
   '';
 
   services.xserver.desktopManager.default = "none";
@@ -39,19 +38,11 @@
       enableContribAndExtras = true;
     };
 
-  services.xserver.videoDrivers = [ "intel" "modesetting" ];
+  services.xserver.videoDrivers = [ "intel" ];
 
   services.xserver.deviceSection = ''
     Option "Backlight" "intel_backlight"
   '';
-
-  location.provider = "geoclue2";
-
-  services.redshift = {
-    enable = true;
-    temperature.day = 6500;
-    temperature.night = 2700;
-  };
 
   services.unclutter-xfixes = {
     enable = true;
