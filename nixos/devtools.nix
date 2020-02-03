@@ -9,7 +9,10 @@
   environment.systemPackages = with pkgs;
     [ arduino
       atom
+      awscli
+      bind
       bundler
+      calc
       docker_compose
       ghc
       gitAndTools.gitFull
@@ -21,8 +24,11 @@
       nodejs
       nodePackages.textlint
       nodePackages.write-good
+      pcalc
+      postman
       rubocop
       ruby
+      teleconsole
       teleport
       unstable.crystal
       unstable.shards
