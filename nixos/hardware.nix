@@ -56,6 +56,7 @@
   hardware =
     { cpu.intel.updateMicrocode = true;
       bluetooth.enable = true;
+      openrazer.enable = true;
     };
 
   # Kill the internal webcam
