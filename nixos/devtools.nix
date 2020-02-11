@@ -13,6 +13,7 @@
       bind
       bundler
       calc
+      ctop
       docker_compose
       ghc
       gitAndTools.gitFull
