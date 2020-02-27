@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  services.xserver.enable = true;
+  services.xserver.enable = false;
 
   services.xserver.xrandrHeads =
     [ { output = "eDP1";
@@ -13,7 +13,7 @@
       }
     ];
 
-  services.xserver.displayManager.lightdm.enable = true;
+  # services.xserver.displayManager.lightdm.enable = true;
 
   services.xserver.desktopManager.default = "none";
 
