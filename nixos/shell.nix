@@ -55,5 +55,7 @@
 
     "cat" = "bat";
     "ping" = "prettyping";
+
+    "tmux" = "tmux -2";
   };
 }
