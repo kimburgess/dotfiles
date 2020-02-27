@@ -11,25 +11,9 @@
           Option "Position" "0 1920"
         '';
       }
-      { output = "DP2";
-        monitorConfig = ''
-          DisplaySize 3840 2160
-          Option "Position" "3840 0"
-          Option "Rotate" "left"
-        '';
-      }
     ];
 
-  services.xserver.libinput =
-    { enable = true;
-      disableWhileTyping = true;
-    };
-
   services.xserver.displayManager.lightdm.enable = true;
-
-  services.xserver.displayManager.setupCommands = ''
-    xrandr --output DP2 --rotate left || true
-  '';
 
   services.xserver.desktopManager.default = "none";
 

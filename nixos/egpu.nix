@@ -27,10 +27,6 @@
         };
     };
 
-  services.xserver.displayManager.setupCommands = ''
-    xrandr --output USB-C-0 --rotate left || true
-  '';
-
   virtualisation.docker.enableNvidia = true;
 
   environment.systemPackages = with pkgs;
