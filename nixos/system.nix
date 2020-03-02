@@ -2,17 +2,21 @@
 
 {
   system.stateVersion = "18.09";
+
   system.autoUpgrade.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 
-  # Enable pulling packages from the unstable branch via unstable.name
   nixpkgs.config.packageOverrides = pkgs:
-    { unstable = import <nixos-unstable>
+    { # Latest and greatest
+      unstable = import <nixos-unstable>
         {
             # pass the nixpkgs config to the unstable alias
             # to ensure `allowUnfree` is propagated:
             config = config.nixpkgs.config;
         };
+
+      # Previous release
+      old = import <nixos-old> { config = config.nixpkgs.config; };
     };
 }
