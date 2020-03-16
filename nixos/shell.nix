@@ -23,8 +23,10 @@
   environment.systemPackages = with pkgs;
     [ alacritty
       bat
+      drive
       gitAndTools.diff-so-fancy
       htop
+      jq
       openssl
       pmutils
       unstable.prettyping
