@@ -1,6 +1,6 @@
 [user]
 	name = Kim Burgess
-	email = kim@acaprojects.com
+	email = kim@place.technology
 	signingkey = 5AC2500C198661531EDB4288596F40AE411536EB
 [core]
 	editor = vim
@@ -16,3 +16,7 @@
        show = diff-so-fancy | less --tabs=1,5 -RFX
 [commit]
 	gpgsign = true
+[submodule]
+	recurse = true
+[github]
+	user = KimBurgess
