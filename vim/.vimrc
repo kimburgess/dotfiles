@@ -67,6 +67,7 @@ set shiftwidth=4
 
 " wrapping
 set textwidth=80
+autocmd Filetype markdown setlocal textwidth=0 wrap linebreak
 
 " UI
 set laststatus=2    " always show status line
