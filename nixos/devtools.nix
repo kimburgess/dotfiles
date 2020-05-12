@@ -18,6 +18,7 @@
       ghc
       gitAndTools.gitFull
       git-lfs
+      gnumake
       httpie
       (liblapack.override { shared = true; })
       nix-prefetch-git
