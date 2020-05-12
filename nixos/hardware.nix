@@ -21,14 +21,12 @@
 
     initrd.availableKernelModules = [ "xhci_pci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
 
-    initrd.luks.devices =
-      [ {
-          name = "root";
-          device = "/dev/disk/by-uuid/a2a77d48-f0b3-4425-bfab-038204dbe5fc";
-          preLVM = true;
-          allowDiscards = true;
-        }
-      ];
+    initrd.luks.devices.root =
+      {
+        device = "/dev/disk/by-uuid/a2a77d48-f0b3-4425-bfab-038204dbe5fc";
+        preLVM = true;
+        allowDiscards = true;
+      };
   };
 
   fileSystems."/" =

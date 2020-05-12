@@ -13,7 +13,7 @@
     tmux =
       { enable = true;
         keyMode = "vi";
-        extraTmuxConf = ''
+        extraConfig = ''
           set -g mouse on
           set -g history-limit 30000
         '';

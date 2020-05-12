@@ -1,10 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  i18n =
-    { consoleKeyMap = "us";
-      defaultLocale = "en_AU.UTF-8";
-    };
+  console.keyMap = "us";
+
+  i18n.defaultLocale = "en_AU.UTF-8";
 
   services.xserver.layout = "us";
 

@@ -6,10 +6,7 @@
       package = pkgs.pulseaudioFull;
     };
 
-  hardware.bluetooth.extraConfig = "
-      [General]
-      Enable=Source,Sink,Media,Socket
-    ";
+  hardware.bluetooth.config.General.Enable = "Source,Sink,Media,Socket";
 
   environment.systemPackages = with pkgs;
     [ audacity

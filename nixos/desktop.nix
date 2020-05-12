@@ -13,9 +13,9 @@
       }
     ];
 
-  # services.xserver.displayManager.lightdm.enable = true;
+  services.xserver.displayManager.lightdm.enable = true;
 
-  services.xserver.desktopManager.default = "none";
+  services.xserver.displayManager.defaultSession = "none+xmonad";
 
   services.xserver.windowManager.xmonad =
     { enable = true;
@@ -58,6 +58,5 @@
   fonts.fontconfig =
     { enable = true;
       dpi = 144;
-      ultimate.enable = true;
     };
 }
