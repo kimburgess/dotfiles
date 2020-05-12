@@ -32,7 +32,7 @@
       teleconsole
       teleport
       unstable.crystal
-      old.shards
+      unstable.shards
       vagrant
       vimHugeX
       wireshark

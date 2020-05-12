@@ -15,8 +15,5 @@
             # to ensure `allowUnfree` is propagated:
             config = config.nixpkgs.config;
         };
-
-      # Previous release
-      old = import <nixos-old> { config = config.nixpkgs.config; };
     };
 }
