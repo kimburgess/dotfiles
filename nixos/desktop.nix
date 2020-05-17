@@ -1,19 +1,21 @@
 { config, lib, pkgs, ... }:
 
 {
-  services.xserver.enable = false;
+  services.xserver.enable = true;
 
   services.xserver.xrandrHeads =
     [ { output = "eDP1";
         primary = true;
         monitorConfig = ''
           DisplaySize 3840 2160
-          Option "Position" "0 1920"
         '';
       }
     ];
 
-  services.xserver.displayManager.lightdm.enable = true;
+  services.xserver.displayManager.lightdm =
+    { enable = true;
+      background = "black";
+    };
 
   services.xserver.displayManager.defaultSession = "none+xmonad";
 
