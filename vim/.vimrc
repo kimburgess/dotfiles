@@ -144,11 +144,6 @@ function! Prose()
   map <silent> <buffer> <leader>qc <Plug>ReplaceWithCurly
   map <silent> <buffer> <leader>qs <Plug>ReplaceWithStraight
 
-  " highlight words (reedes/vim-wordy)
-  noremap <silent> <buffer> <F8> :<C-u>NextWordy<cr>
-  xnoremap <silent> <buffer> <F8> :<C-u>NextWordy<cr>
-  inoremap <silent> <buffer> <F8> <C-o>:NextWordy<cr>
-
   " spelling
   let g:lexical#spelllang = ['en_au']
 
