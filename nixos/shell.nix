@@ -45,6 +45,8 @@
   fonts.fonts = with pkgs; [ terminus_font inconsolata ];
   fonts.fontconfig.defaultFonts.monospace = [ "Inconsolata" ];
 
+  environment.homeBinInPath = true;
+
   environment.shellAliases = {
     ".."   = "cd ..";
     "..."  = "cd ../..";
