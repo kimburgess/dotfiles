@@ -30,7 +30,7 @@ Plug 'tpope/vim-sleuth'
 Plug 'sheerun/vim-polyglot'
 Plug 'pangloss/vim-javascript'
 Plug 'elzr/vim-json'
-Plug 'rhysd/vim-crystal'
+Plug 'vim-crystal/vim-crystal'
 
 " Text
 Plug 'junegunn/goyo.vim'
