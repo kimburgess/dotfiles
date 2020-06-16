@@ -18,6 +18,7 @@
       ghc
       gitAndTools.gitFull
       git-lfs
+      google-cloud-sdk
       gnumake
       httpie
       (liblapack.override { shared = true; })
