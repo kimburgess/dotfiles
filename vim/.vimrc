@@ -1,7 +1,8 @@
 call plug#begin('~/.vim/bundle')
 
 " Files
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
@@ -95,6 +96,16 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 " make leaving insert mode suck less
 inoremap jk <esc>
+
+" search
+nmap <leader>f :GFiles<CR>
+nmap <leader>F :Files<CR>
+nmap <leader>b :Buffers<CR>
+nmap <leader>h :History<CR>
+nmap <leader>t :BTags<CR>
+nmap <leader>T :Tags<CR>
+nmap <leader>C :Commands<CR>
+nmap <leader>: :History:<CR>
 
 " NERDTree config
 let NERDTreeMapAtivateNode='<right>'
