@@ -12,10 +12,7 @@
       }
     ];
 
-  services.xserver.displayManager.lightdm =
-    { enable = true;
-      background = "black";
-    };
+  services.xserver.displayManager.lightdm.enable = true;
 
   services.xserver.displayManager.defaultSession = "none+xmonad";
 
