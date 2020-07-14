@@ -13,6 +13,6 @@
       ./media.nix
       ./yubikey-gpg.nix
       ./gaming.nix
-#      ./egpu.nix
+      ./egpu.nix
     ];
 }
