@@ -23,6 +23,7 @@
           "audio"
           "dialout"
           "video"
+          "disk"
         ];
         hashedPassword = "$6$LG/3rGeWt$ngPvaxukpTybvpaIIDCoXZEjpupaWqsXHZolXNkS.LhbNX3PH6U7SebWjWtF09oKfWWO.oy4EeXF.fHAI768B.";
       };
