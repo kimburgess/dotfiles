@@ -7,7 +7,8 @@
     };
 
   environment.systemPackages = with pkgs;
-    [ arduino
+    [ ameba
+      arduino
       atom
       awscli
       bind
