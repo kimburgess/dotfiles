@@ -168,3 +168,21 @@ endfunction
 
 " invoke manually by command for other file types
 command! -nargs=0 Prose call Prose()
+
+" copy to attached terminal using the yank script:
+" https://github.com/sunaku/home/blob/master/bin/yank
+function! Yank(text) abort
+  let escape = system('yank', a:text)
+  if v:shell_error
+    echoerr escape
+  else
+    call writefile([escape], '/dev/tty', 'b')
+  endif
+endfunction
+noremap <silent> <Leader>y y:<C-U>call Yank(@0)<CR>
+
+" automatically run yank(1) whenever yanking in Vim
+function! CopyYank() abort
+  call Yank(join(v:event.regcontents, "\n"))
+endfunction
+autocmd TextYankPost * call CopyYank()
