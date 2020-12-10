@@ -180,9 +180,3 @@ function! Yank(text) abort
   endif
 endfunction
 noremap <silent> <Leader>y y:<C-U>call Yank(@0)<CR>
-
-" automatically run yank(1) whenever yanking in Vim
-function! CopyYank() abort
-  call Yank(join(v:event.regcontents, "\n"))
-endfunction
-autocmd TextYankPost * call CopyYank()
